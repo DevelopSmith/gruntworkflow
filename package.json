@@ -13,6 +13,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-sass": "^1.2.1",
     "grunt-wiredep": "^3.0.1",
-    "node-sass": "^3.10.1"
+    "node-sass": "^3.10.1",
+    "require-directory": "^2.1.1"
   }
 }

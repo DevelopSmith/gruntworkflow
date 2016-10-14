@@ -1,74 +1,10 @@
 module.exports = function(grunt){
-	grunt.initConfig({
-		concat: { //> can NOT change the term
-			options: {
-				banner: '// All the JS files!!\n\n\n\n\n',
-				separator: '\n\n//------------------------------------------------------//\n',
-			},
-			dist: { //> can change the term
-				src: ['components/scripts/*.js'],
-				dest: 'builds/development/js/script.js'
-			},
-			prod: { //> can change the term
-				src: ['components/scripts/*.js'],
-				dest: 'builds/production/js/script.js'
-			}
-		},
-
-		bower_concat: {
-			all: {
-				dest: {					
-					js: 'builds/development/js/_bower.js',
-					css: 'builds/development/css/_bower.css'
-				},
-				mainFiles: {
-					bootstrap: 'dist/css/bootstrap.min.css'
-				}
-			}
-		},
-
-		sass: { //> can NOT change the term
-			disto: { //> can change the term
-				options: {
-					style: 'compressed'
-				},
-				files: [{
-					src: 'components/sass/style.scss',
-					dest: 'builds/development/css/style.css'
-				}]
-			}
-		},
-
-		watch: {
-			scripts: {
-				files: ['builds/development/index.html',
-						'components/scripts/**/*.js',
-						'components/sass/**/*.scss'],
-				tasks: ['concat:dist', 'sass'],
-			},
-			options: {
-				spawn: false,
-				livereload: true
-			}
-		},
-
-		connect: {
-			server: {
-				options: {
-					hostname: 'localhost',
-					port: 3000,
-					base: 'builds/development/',
-					livereload: true
-				}
-			}
-		},
-
-		wiredep: {
-			task: {
-				src: 'builds/development/*.html'
-			}
-		}
-	});
+	/*
+	* Here we require the index.js from grunt folder which will export the `require-directory` object.
+	* require-directory will name the tasks from each file and push it with the name of the file
+	*/
+	var gruntConfig = require('./grunt');
+	grunt.initConfig(gruntConfig);
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-concat');
