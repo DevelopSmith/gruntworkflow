@@ -1,0 +1,20 @@
+{
+  "name": "gruntworkflows",
+  "version": "1.0.0",
+  "authors": [
+    "DevelopSmith"
+  ],
+  "description": "Workflows with Grunt",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.7",
+    "mustache": "~2.2.1"
+  }
+}

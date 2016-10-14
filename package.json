@@ -1,0 +1,18 @@
+{
+  "name": "gruntworkflows",
+  "version": "1.0.0",
+  "description": "Project for Grunt Workflows Course",
+  "author": "Develop Smith",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-bower-concat": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.1",
+    "grunt-wiredep": "^3.0.1",
+    "node-sass": "^3.10.1"
+  }
+}
